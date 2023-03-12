@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-to-my-potfolio/static/css/main.c2cab247.css",
-    "main.js": "/react-to-my-potfolio/static/js/main.bad80a7b.js",
-    "index.html": "/react-to-my-potfolio/index.html",
-    "main.c2cab247.css.map": "/react-to-my-potfolio/static/css/main.c2cab247.css.map",
-    "main.bad80a7b.js.map": "/react-to-my-potfolio/static/js/main.bad80a7b.js.map"
+    "main.css": "/react-to-my-portfolio/static/css/main.c2cab247.css",
+    "main.js": "/react-to-my-portfolio/static/js/main.bad80a7b.js",
+    "index.html": "/react-to-my-portfolio/index.html",
+    "main.c2cab247.css.map": "/react-to-my-portfolio/static/css/main.c2cab247.css.map",
+    "main.bad80a7b.js.map": "/react-to-my-portfolio/static/js/main.bad80a7b.js.map"
   },
   "entrypoints": [
     "static/css/main.c2cab247.css",
