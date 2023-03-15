@@ -1,9 +1,15 @@
 import React from 'react';
 
+const styles = {
+  header: {
+    textAlign: 'center',
+  }
+};
+
 export default function Contact() {
   return (
     <div>
-      <h1>Contact Me</h1>
+      <h1 style={styles.header}>Contact Me</h1>
       <p>
         Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
         molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet

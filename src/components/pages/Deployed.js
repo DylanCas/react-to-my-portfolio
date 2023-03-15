@@ -1,9 +1,15 @@
 import React from 'react';
 
+const styles = {
+  header: {
+    textAlign: 'center',
+  }
+};
+
 export default function Deployed() {
   return (
     <div>
-      <h1>Deployed Works</h1>
+      <h1 style={styles.header}>Deployed Works</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
