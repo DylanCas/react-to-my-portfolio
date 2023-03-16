@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { validateEmail } from '../../utils/helpers';
 
 const styles = {
   header: {
@@ -6,23 +7,60 @@ const styles = {
   }
 };
 
+// TODO: Form captures data. Validates content. Bonus TODO: sends data to server/email.
 export default function Contact() {
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' }); 
+
+  const [errorMessage, setErrorMessage] = useState('');
+  const {name, email, message } = formState;
+
+  const handleSubmit = (e) => { 
+    e.preventDefault();
+    console.log("Form Submitted", formState);
+  }
+
+  const handleChange = (e) => { 
+    if (e.target.name === 'email') {
+      const isValid = validateEmail(e.target.value);
+      console.log(isValid);
+      // isValid conditional statement
+      if (!isValid) {
+        setErrorMessage('Your email is invalid.');
+      } else {
+        setErrorMessage('');
+      }
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage('');
+      }
+    }
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+      console.log('Handle Form', formState);
+    }
+  }
+
   return (
     <div>
       <h1 style={styles.header}>Contact Me</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <form id='contact-form' onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" name="name" onBlur={handleChange} />
+        </label>
+        <label>
+          Email*:
+          <input type="text" name="email" required="true" onBlur={handleChange} />
+        </label>
+        <label>
+          Message:
+          <textarea name="message" rows="5" onBlur={handleChange}/>
+        </label>
+        <p>{errorMessage}</p>
+        <button type='submit'>Submit</button>
+      </form>
     </div>
   );
 }
