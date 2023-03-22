@@ -2,12 +2,28 @@ import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 
 const styles = {
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
   header: {
+    display: 'flex',
     textAlign: 'center',
+    justifyContent: 'center',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  formBox: {
+    display: 'flex',
+    flexDirection: 'column',
   }
 };
 
-// TODO: Form captures data. Validates content. Bonus TODO: sends data to server/email.
+// Form captures data. Validates content. Bonus TODO: sends data to server/email.
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' }); 
 
@@ -43,19 +59,19 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div style={styles.main}>
       <h1 style={styles.header}>Contact Me</h1>
-      <form id='contact-form' onSubmit={handleSubmit}>
-        <label>
-          Name:
+      <form id='contact-form' style={styles.form} onSubmit={handleSubmit}>
+        <label style={styles.formBox}>
+          Name*:
           <input type="text" name="name" onBlur={handleChange} />
         </label>
-        <label>
+        <label style={styles.formBox}>
           Email*:
           <input type="text" name="email" required="true" onBlur={handleChange} />
         </label>
-        <label>
-          Message:
+        <label style={styles.formBox}>
+          Message*:
           <textarea name="message" rows="5" onBlur={handleChange}/>
         </label>
         <p>{errorMessage}</p>
