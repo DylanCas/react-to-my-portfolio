@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 
 const styles = {
-  main: {
+  content: {
     display: 'flex',
     flexDirection: 'column',
+    background: 'lightgrey',
   },
   header: {
     display: 'flex',
@@ -16,6 +17,8 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     alignContent: 'center',
+    margin: 20,
+    
   },
   formBox: {
     display: 'flex',
@@ -59,24 +62,30 @@ export default function Contact() {
   }
 
   return (
-    <div style={styles.main}>
+    <div style={styles.content}>
       <h1 style={styles.header}>Contact Me</h1>
       <form id='contact-form' style={styles.form} onSubmit={handleSubmit}>
         <label style={styles.formBox}>
           Name*:
-          <input type="text" name="name" onBlur={handleChange} />
+          <input type="text" name="Name" onBlur={handleChange} />
         </label>
         <label style={styles.formBox}>
           Email*:
-          <input type="text" name="email" required="true" onBlur={handleChange} />
+          <input type="text" name="Email" required="true" onBlur={handleChange} />
         </label>
         <label style={styles.formBox}>
           Message*:
-          <textarea name="message" rows="5" onBlur={handleChange}/>
+          <textarea name="Message" rows="5" onBlur={handleChange}/>
         </label>
         <p>{errorMessage}</p>
         <button type='submit'>Submit</button>
       </form>
+      <div style={styles.form}>
+        <ul>
+          <li>Email: <a href='mailto:djcasabona12@gmail.com'>djcasabona12@gmail.com</a></li>
+          <li>GitHub: <a href='https://github.com/DylanCas' target={'_blank'} rel="noreferrer">DylanCas</a></li>
+        </ul>
+      </div>
     </div>
   );
 }

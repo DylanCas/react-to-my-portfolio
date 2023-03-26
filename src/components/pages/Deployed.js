@@ -3,20 +3,30 @@ import trailPlanner from './trailPlanner.png';
 import maintLogger from './maintLogger.png';
 
 const styles = {
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    background: 'lightgrey',
+  },
   header: {
     textAlign: 'center',
+  },
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   projectImg: {
     width: 300,
     height: 200,
   }
 };
-// TODO: insert images
+
 export default function Deployed() {
   return (
-    <div>
+    <div style={styles.content}>
       <h1 style={styles.header}>Deployed Works</h1>
-      <main>
+      <main style={styles.main}>
         <div>
           <section>
             <p>Below are the GitHub links to several projects and assignments I've worked on. Links are to repos as some sites/apps may not be running/live at the time. </p>
