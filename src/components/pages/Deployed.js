@@ -1,12 +1,12 @@
 import React from 'react';
-import trailPlanner from './trailPlanner.png';
-import maintLogger from './maintLogger.png';
+// import './pages.css';
+import trailPlanner from './images/trailPlanner.png';
+import maintLogger from './images/maintLogger.png';
 
 const styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'lightgrey',
   },
   header: {
     textAlign: 'center',
