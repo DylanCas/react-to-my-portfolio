@@ -5,6 +5,7 @@ const styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
+    background: 'lightgrey',
   },
   header: {
     display: 'flex',

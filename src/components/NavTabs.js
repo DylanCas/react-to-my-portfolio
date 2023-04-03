@@ -9,7 +9,7 @@ const styles = {
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <ul className="nav nav-tabs" style={styles.navBackground}>
-      <li className="nav-item" >
+      <li className="nav-item">
         <a
           href="#about"
           onClick={() => handlePageChange('About')}
