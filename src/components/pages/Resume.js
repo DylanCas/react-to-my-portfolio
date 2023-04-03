@@ -14,6 +14,7 @@ const styles = {
   }
 };
 
+// TODO: Upload completed resume to assets folder. Update link to resume.
 export default function Resume() {
   return (
     <div>
