@@ -1,12 +1,12 @@
 import React from 'react';
-import trailPlanner from './trailPlanner.png';
-import maintLogger from './maintLogger.png';
+import trailPlanner from './assets/trailPlanner.png';
+import maintLogger from './assets/maintLogger.png';
+import killAllTires from './assets/killAllTires.png';
 
 const styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'lightgrey',
   },
   header: {
     textAlign: 'center',
@@ -33,6 +33,10 @@ export default function Deployed() {
           </section>
         </div>
         <div>
+        <section>
+            <p>Kill All Tires</p>
+            <a href='https://github.com/wjg97/Kill-All-Tires' target='_blank' rel="noreferrer"><img alt='Link to Kill All Tires project GitHub' style={styles.projectImg} src={killAllTires}></img></a>
+          </section>
           <section>
             <p>Maintenance Logger</p>
             <a href='https://github.com/DylanCas/project2_maintenanceLog' target='_blank' rel="noreferrer"><img alt='Link to vehicle maintenance logger project GitHub' style={styles.projectImg} src={maintLogger}></img></a>

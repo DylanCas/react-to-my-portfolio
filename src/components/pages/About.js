@@ -1,10 +1,7 @@
 import React from 'react';
-import profilePic from './profile-pic.jpeg'
+import profilePic from './assets/profile-pic.jpeg'
 
 const styles = {
-  content: {
-    background: 'lightgrey',
-  },
   header: {
     textAlign: 'center',
   },
@@ -17,7 +14,7 @@ const styles = {
 
 export default function About() {
   return (
-    <div style={styles.content}>
+    <div>
       <h1 style={styles.header}>Dylan Casabona</h1>
       <img src={profilePic} alt='Me standing on a mountain' style={styles.image}></img>
       <h2>Hello visitors!</h2>

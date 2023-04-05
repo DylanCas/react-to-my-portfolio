@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
   navBackground: {
-    background: 'darkgrey',
+    background: 'lightblue',
   },
 };
 
