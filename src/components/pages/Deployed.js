@@ -1,21 +1,52 @@
 import React from 'react';
+import trailPlanner from './assets/trailPlanner.png';
+import maintLogger from './assets/maintLogger.png';
+import killAllTires from './assets/killAllTires.png';
+
+const styles = {
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  header: {
+    textAlign: 'center',
+  },
+  main: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  projectImg: {
+    width: 300,
+    height: 200,
+  }
+};
 
 export default function Deployed() {
   return (
-    <div>
-      <h1>Deployed Works</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+    <div style={styles.content}>
+      <h1 style={styles.header}>Deployed Works</h1>
+      <main style={styles.main}>
+        <div>
+          <section>
+            <p>Below are the GitHub links to several projects and assignments I've worked on. Links are to repos as some sites/apps may not be running/live at the time. </p>
+          </section>
+        </div>
+        <div>
+        <section>
+            <p>Kill All Tires</p>
+            <a href='https://github.com/wjg97/Kill-All-Tires' target='_blank' rel="noreferrer"><img alt='Link to Kill All Tires project GitHub' style={styles.projectImg} src={killAllTires}></img></a>
+          </section>
+          <section>
+            <p>Maintenance Logger</p>
+            <a href='https://github.com/DylanCas/project2_maintenanceLog' target='_blank' rel="noreferrer"><img alt='Link to vehicle maintenance logger project GitHub' style={styles.projectImg} src={maintLogger}></img></a>
+          </section>
+          <section>
+            <p>Trail Planner</p>
+            <a href='https://github.com/josht-dev/trail-planner' target='_blank' rel="noreferrer"><img alt='Link to Trail Planner GitHub' style={styles.projectImg} src={trailPlanner}></img></a>
+          </section>
+        </div>
+      </main>
     </div>
   );
 }
