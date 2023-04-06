@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react-to-my-portfolio/static/css/main.4a210a12.css",
-    "main.js": "/react-to-my-portfolio/static/js/main.55e2aa0e.js",
+    "main.css": "/react-to-my-portfolio/static/css/main.ab6f86bc.css",
+    "main.js": "/react-to-my-portfolio/static/js/main.3a412f03.js",
     "static/media/trailPlanner.png": "/react-to-my-portfolio/static/media/trailPlanner.bdd79e7f1eff6e6bcd26.png",
+    "static/media/killAllTires.png": "/react-to-my-portfolio/static/media/killAllTires.9ab8f23a482fd753c1c6.png",
     "static/media/profile-pic.jpeg": "/react-to-my-portfolio/static/media/profile-pic.dac2105d756804685020.jpeg",
     "static/media/maintLogger.png": "/react-to-my-portfolio/static/media/maintLogger.5d72e06eb9e6ebba8b62.png",
-    "static/media/DC-DevResume.pdf": "/react-to-my-portfolio/static/media/DC-DevResume.6de179329aa181385e89.pdf",
+    "static/media/DC-DevResume.pdf": "/react-to-my-portfolio/static/media/DC-DevResume.2d9fa6a7955ff933a53e.pdf",
     "index.html": "/react-to-my-portfolio/index.html",
-    "main.4a210a12.css.map": "/react-to-my-portfolio/static/css/main.4a210a12.css.map",
-    "main.55e2aa0e.js.map": "/react-to-my-portfolio/static/js/main.55e2aa0e.js.map"
+    "main.ab6f86bc.css.map": "/react-to-my-portfolio/static/css/main.ab6f86bc.css.map",
+    "main.3a412f03.js.map": "/react-to-my-portfolio/static/js/main.3a412f03.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a210a12.css",
-    "static/js/main.55e2aa0e.js"
+    "static/css/main.ab6f86bc.css",
+    "static/js/main.3a412f03.js"
   ]
 }
